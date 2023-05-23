@@ -3,7 +3,7 @@ import turtle
 window = turtle.Screen()
 window.title("Ping Pong By HIMAKAR")                      # create window title
 window.bgcolor("skyblue")                                 # set the color of the BG
-window.setup(width=800, height=600)                     # set window width and height
+window.setup(width=1000, height=800)                     # set window width and height
 window.tracer(0)                                        # prevent auto update of the window
 
 player1 = turtle.Turtle()
@@ -140,7 +140,7 @@ while True:
         ball.dy *= -1
 
         sc3 -= 1
-        score.clear()  # to clear the old score to update it
+        score.clear()  # to clear the old score and update it
         score.write(f"player 1: {score1} || player 2: {score2} || player 3: {sc3} || player 4: {sc4}", align="center", font=("Courier", 15, "normal"))
 
     if ball.ycor() < -250:                              # if the ball touched the lower boarder of the window (lower boarder of the window at -300 px and the ball is 20 px)
@@ -149,7 +149,7 @@ while True:
         ball.dy *= -1
 
         sc4 -= 1
-        score.clear()  # to clear the old score to update it
+        score.clear()  # to clear the old score and update it
         score.write(f"player 1: {score1} || player 2: {score2} || player 3: {sc3} || player 4: {sc4}", align="center", font=("Courier", 15, "normal"))
 
     if ball.xcor() > 390:                               # if the ball touched the right boarder of the window (right boarder of the window at 400 px and the ball is 20 px)
